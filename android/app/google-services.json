@@ -1,34 +1,42 @@
 {
   "project_info": {
-    "project_number": "88876114884",
-    "firebase_url": "https://chat-application-9e996.firebaseio.com",
-    "project_id": "chat-application-9e996",
-    "storage_bucket": "chat-application-9e996.appspot.com"
+    "project_number": "778190210303",
+    "firebase_url": "https://barta-ee788.firebaseio.com",
+    "project_id": "barta-ee788",
+    "storage_bucket": "barta-ee788.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:88876114884:android:b761e0e17e4b17e33f3a91",
+        "mobilesdk_app_id": "1:778190210303:android:9b18ffacf8ccc82d10f8ca",
         "android_client_info": {
           "package_name": "com.test2.flutter_wapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "88876114884-ljpcb1nljkdov66o7jbi4ht24eau8h5c.apps.googleusercontent.com",
+          "client_id": "778190210303-jljbtqoubs41b5fr93cltsbdoqenssfs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.test2.flutter_wapp",
+            "certificate_hash": "2e01c02cb6074ac1acd1c43f64ce6d29792c2f5a"
+          }
+        },
+        {
+          "client_id": "778190210303-n228nf12fgmsps1q4se3o029ibb2os3i.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDj9zjOSrWGnGd4HAToi16k7A8oqa-5SHc"
+          "current_key": "AIzaSyAHLxUFG4fCfiOtaW0ZX2qHspJJNlh1MUM"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "88876114884-ljpcb1nljkdov66o7jbi4ht24eau8h5c.apps.googleusercontent.com",
+              "client_id": "778190210303-n228nf12fgmsps1q4se3o029ibb2os3i.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
