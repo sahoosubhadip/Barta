@@ -36,6 +36,10 @@ class _VerifyNoState extends State<VerifyNo> {
               height: 10,
             ),
             button(context),
+            SizedBox(
+              height: 12.0,
+            ),
+            clickableText(),
 
           ],
         ),
@@ -99,6 +103,18 @@ class _VerifyNoState extends State<VerifyNo> {
 
       ),
     );
+  }
+  clickableText() {
+    return GestureDetector(
+        child: RichText(
+          text: TextSpan(
+            text: "Resend OTP  ",
+            style: TextStyle(color: Colors.blue, fontSize: 15),
+          ),
+        ),
+        onTap: () {
+          print("printed");
+        });
   }
 
 }

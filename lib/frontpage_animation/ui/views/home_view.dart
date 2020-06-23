@@ -74,12 +74,11 @@ class _HomeViewState extends State<HomeView> {
                     model.isValidEmail(value);
                   },
                 ),
-
                 SizedBox(
                   height: 12.0,
                 ),
-
                 TextFieldWidget(
+
                   hintText: 'Phone Number',
                   obscureText: false,
                   prefixIconData: Icons.phone_iphone,
@@ -90,33 +89,11 @@ class _HomeViewState extends State<HomeView> {
                     });
                   },
                 ),
-
                 SizedBox(
-                  height: 12.0,
+                  height: 20.0,
                 ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: <Widget>[
-                    TextFieldWidget(
-                      hintText: 'Password',
-                      obscureText: model.isVisible ? false : true,
-                      prefixIconData: Icons.lock_outline,
-                      suffixIconData: model.isVisible
-                          ? Icons.visibility
-                          : Icons.visibility_off,
-                    ),
-                    SizedBox(
-                      height: 12.0,
-                    ),
-                    clickableText(),
-                  ],
-                ),
-//                SizedBox(
-//                  height: 20.0,
-//                ),
                 RaisedButton(
                   onPressed: _auth,
-
                   child: Text('Continue', style: TextStyle(fontSize: 16)),
                 ),
                 SizedBox(
@@ -132,7 +109,7 @@ class _HomeViewState extends State<HomeView> {
 
   _auth() async {
     print(phone);
-    String phoneNumber = "+91"+ phone;
+    String phoneNumber = "+91" + phone;
     firebaseAuth.verifyPhoneNumber(
         phoneNumber: phoneNumber,
         timeout: Duration(seconds: 60),
@@ -140,7 +117,6 @@ class _HomeViewState extends State<HomeView> {
         verificationFailed: verificationFailed,
         codeSent: codeSend,
         codeAutoRetrievalTimeout: codeAutoRetrievalTimeout);
-
   }
 
   codeSend(String verificationId, [int forceResendingToken]) async {
@@ -151,20 +127,18 @@ class _HomeViewState extends State<HomeView> {
     });
   }
 
-   codeAutoRetrievalTimeout
-      (String verificationId) async {
+  codeAutoRetrievalTimeout(String verificationId) async {
     print("codeAutoRetrievalTimeout");
     print(verificationId);
-pageChange(verificationId);
+    pageChange(verificationId);
   }
 
-   verificationFailed
-      (AuthException authException) async {
+  verificationFailed(AuthException authException) async {
     print("verificationFailed");
     print(authException);
-  // pageChange(verificationID);
-     print(authException.code);
-     print(authException.message);
+    // pageChange(verificationID);
+    print(authException.code);
+    print(authException.message);
   }
 
   verificationCompleted(AuthCredential auth) async {
@@ -175,30 +149,12 @@ pageChange(verificationId);
     //return "";
   }
 
-
-  pageChange(verificationId){
-
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => VerifyNo(verificationId)),
-      );
-
+  pageChange(verificationId) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => VerifyNo(verificationId)),
+    );
   }
-
-
-}
-
-clickableText() {
-  return GestureDetector(
-      child: RichText(
-        text: TextSpan(
-          text: "Forgot Password ",
-          style: TextStyle(color: Colors.blue, fontSize: 15),
-        ),
-      ),
-      onTap: () {
-        print("printed");
-      });
 }
 
 

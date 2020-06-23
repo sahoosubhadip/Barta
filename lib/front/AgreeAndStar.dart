@@ -19,47 +19,50 @@ class _AgreeAndStartState extends State<AgreeAndStart> {
   Widget build(BuildContext context) {
     return Scaffold(
         //backgroundColor: Colors.black,
-        body: Column(
-      children: <Widget>[
-        text1(),
-        pic(),
-        SizedBox(
-          height: 10,
-        ),
-        text2(),
-        SizedBox(
-          height: 20,
-        ),
-        text3(),
-        SizedBox(
-          height: 20,
-        ),
-        text4(),
-        SizedBox(
-          height: 10,
-        ),
-        text5(),
-        SizedBox(
-          height: 20,
-        ),
-        text6(),
-        SizedBox(
-          height: 16,
-        ),
-        text7(),
-        SizedBox(
-          height: 15,
-        ),
-        text8(),
-        SizedBox(
-          height: 20,
-        ),
-        button(context),
-        SizedBox(
-          height: 20,
-        ),
-      ],
-    ));
+       body: SingleChildScrollView(
+          child: Column(
+             children: <Widget>[
+               text1(),
+               pic(),
+               SizedBox(
+                 height: 10,
+               ),
+               text2(),
+               SizedBox(
+                 height: 20,
+               ),
+               text3(),
+               SizedBox(
+                 height: 20,
+               ),
+               text4(),
+               SizedBox(
+                 height: 10,
+               ),
+               text5(),
+               SizedBox(
+                 height: 20,
+               ),
+               text6(),
+               SizedBox(
+                 height: 16,
+               ),
+               text7(),
+               SizedBox(
+                 height: 15,
+               ),
+               text8(),
+               SizedBox(
+                 height: 20,
+               ),
+               button(context),
+               SizedBox(
+                 height: 20,
+               ),
+             ],
+           )
+       ),
+    );
   }
 }
 
